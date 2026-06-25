@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Advisor</title>
+<style>
+body{
+  font-family: Arial;
+  padding:20px;
+  background:#f2f7ff;
+}
+h1{
+  color:blue;
+}
+h2{
+  color:darkblue;
+}
+input, button{
+  padding:8px;
+  margin:5px;
+}
+button{
+  background:blue;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+#result{
+    margin-top:20px;
+    padding:15px;
+    background:white;
+    border-radius:8px;
+    box-shadow:0 0 5px gray;
+}
+</style>
+</head>
+<script>
+function showCareer() {
+let interest =
+document.getElementById("interest").value.trim();
+if (interest == "Biology") {
+document.getElementById("result").innerHTML =
+"<h3>Career Recommendation</h3>" +
+"<p><b>Career:</b> Doctor</p>" +
+"<p><b>Course:</b> MBBS</p>" +
+"<p><b>Skills:</b> Biology, Communication</p>" +
+"<p><b>Roadmap:</b> 12th Bio → NEET → MBBS → Doctor</p>";
+}
+else if (interest == "Business") {
+document.getElementById("result").innerHTML =
+"<h3>Career Recommendation</h3>" +
+"<p><b>Career:</b> Entrepreneur</p>" +
+"<p><b>Course:</b> BBA / MBA</p>" +
+"<p><b>Skills:</b> Leadership, Marketing</p>" +
+"<p><b>Roadmap:</b> 12th → BBA → MBA → Business</p>";
+}
+else if (interest == "Designing") {
+document.getElementById("result").innerHTML =
+"<h3>Career Recommendation</h3>" +
+"<p><b>Career:</b> UI/UX Designer</p>" +
+"<p><b>Course:</b> B.Des</p>" +
+"<p><b>Skills:</b> Creativity, Figma</p>" +
+"<p><b>Roadmap:</b> 12th → Design Course → UI/UX Designer</p>";
+}
+else if (interest == "Computer Science") {
+document.getElementById("result").innerHTML =
+"<h3>Career Recommendation</h3>" +
+"<p><b>Career:</b> Software Engineer</p>" +
+"<p><b>Course:</b> B.E CSE / B.Tech IT</p>" +
+"<p><b>Skills:</b> Coding, Problem Solving</p>" +
+"<p><b>Roadmap:</b> 12th → Engineering → Software Engineer</p>";
+}
+else {
+document.getElementById("result").innerHTML =
+"<h3>Career Recommendation</h3>" +
+"<p><b>Career:</b> Software Engineer</p>";
+}
+}
+</script>
+<body>
+<h1>One-Stop Personalized Career & Education Advisor</h1>
+<p>Welcome to your career guidance platform</p>
+<h2>Student Profile</h2>
+<label>Name:</label><br>
+<input type="text" id="name"><br><br>
+<label>Age:</label><br>
+<input type="number"><br><br>
+<label>Class:</label><br>
+<input type="text"><br><br>
+<label>Interest:</label><br>
+<input type="text" id="interest"><br><br>
+<h2>Career Questions</h2>
+<p>Do you like Coding?</p>
+<input type="radio"> Yes
+<input type="radio"> No
+<p>Do you like Biology?</p>
+<input type="radio"> Yes
+<input type="radio"> No
+<p>Do you like Business?</p>
+<input type="radio"> Yes
+<input type="radio"> No
+<p>Do you like Designing?</p>
+<input type="radio"> Yes
+<input type="radio"> No
+<br><br>
+<button onclick="showCareer()">Submit</button>
+<button onclick="location.reload()">Reset</button>
+<div id="result"></div>
+<p><b>Thank you for using Career Advisor!</b></p>
+<h2>About Project</h2>
+<p>
+This Career Advisor System helps students choose suitable careers based on their interests and preferences.
+</p>
+<hr>
+<p style="text-align:center;">
+Created by RANJANA
+</p>
+</body>
+</html>
+
